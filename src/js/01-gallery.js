@@ -3,7 +3,7 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryItems } from './gallery-items';
 const gallery = document.querySelector('.gallery');
-const galleryAdd = galleryItems
+const galleryAdd = insertAdjacentHTML(
   .map(({ preview, original, description }) =>
     `<li class="gallery__item">
       <a class="gallery__link" href="${original}">
@@ -17,6 +17,7 @@ const galleryAdd = galleryItems
     </li>`
   )
   .join('');
+  )
 // Change code below this line
 const lightbox = new SimpleLightbox('.gallery a'), {};
 console.log(galleryItems);
